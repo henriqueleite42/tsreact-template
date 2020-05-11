@@ -27,13 +27,14 @@
         "groups": [
           "module",
           ["parent", "sibling", "index"],
-          "/@redux/",
-          "/@functions/",
-          "/@utils/",
-          "/@config/",
-          "/@constants/",
-          "/@assets/",
-          "/@interfaces/",
+          "/Views/",
+          "/Redux/",
+          "/Functions/",
+          "/Utils/",
+          "/Config/",
+          "/Constants/",
+          "/Interfaces/",
+          "/Assets/",
           "/style/"
         ],
         "alphabetize": {

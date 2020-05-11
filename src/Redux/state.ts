@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import AppState, { State } from "@interfaces/AppState";
+import AppState, { State } from "Interfaces/AppState";
 
 type Actions =
   | { type: "state/NAV_OPEN" }

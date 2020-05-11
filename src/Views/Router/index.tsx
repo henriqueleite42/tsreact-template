@@ -1,12 +1,13 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import { useGlobalState } from "../../Redux/state";
 import AuthOnlyRoutes from "./AuthOnlyRoutes";
 import Loading from "./Loading";
 import loadRoute from "./loadRoute";
 
-import Routes from "@config/routes";
+import { useGlobalState } from "../../Redux/state";
+
+import Routes from "Config/routes";
 
 const Router: React.FC = () => {
   const GlobalState = useGlobalState();

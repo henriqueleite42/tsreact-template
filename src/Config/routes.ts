@@ -8,9 +8,9 @@ export interface RouteInterface {
 
 const NON_AUTH_ROUTES: Array<RouteInterface> = [
   {
-    name: "jobs",
-    fullRoute: "/jobs",
-    component: "Jobs",
+    name: "home",
+    fullRoute: "/",
+    component: "Home",
     navBar: true
   }
 ];
