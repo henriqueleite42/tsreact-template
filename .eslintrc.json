@@ -26,15 +26,14 @@
         "newlinesBetween": "always",
         "groups": [
           "module",
-          // "/^@shared/",
           ["parent", "sibling", "index"],
-          "/Redux/",
-          "/Functions/",
-          "/Utils/",
-          "/Config/",
-          "/Constants/",
-          "/Assets/",
-          "/Interfaces/",
+          "/@redux/",
+          "/@functions/",
+          "/@utils/",
+          "/@config/",
+          "/@constants/",
+          "/@assets/",
+          "/@interfaces/",
           "/style/"
         ],
         "alphabetize": {

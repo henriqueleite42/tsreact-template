@@ -1,13 +1,12 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import { useGlobalState } from "../../Redux/state";
 import AuthOnlyRoutes from "./AuthOnlyRoutes";
 import Loading from "./Loading";
 import loadRoute from "./loadRoute";
 
-import { useGlobalState } from "../../Redux/state";
-
-import Routes from "~/Config/routes";
+import Routes from "@config/routes";
 
 const Router: React.FC = () => {
   const GlobalState = useGlobalState();
@@ -22,7 +21,7 @@ const Router: React.FC = () => {
                 exact
                 key={index}
                 path={route.fullRoute}
-                component={loadRoute(route.component, route.navBar)}
+                component={loadRoute(route)}
               />
             ))}
             <AuthOnlyRoutes>
@@ -30,7 +29,7 @@ const Router: React.FC = () => {
                 <Route
                   key={index}
                   path={route.fullRoute}
-                  component={loadRoute(route.component, route.navBar)}
+                  component={loadRoute(route)}
                 />
               ))}
             </AuthOnlyRoutes>

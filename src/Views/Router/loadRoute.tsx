@@ -1,10 +1,12 @@
 import React from "react";
 
-const loadRoute = (viewName: string, navBar: boolean): React.FC => {
-  const Element = React.lazy(() => import(`../${viewName}`));
+import { RouteInterface } from "@config/routes";
 
-  if (navBar) {
-    const NavBar = React.lazy(() => import("../NavBar"));
+const loadRoute = (route: RouteInterface): React.FC => {
+  const Element = React.lazy(() => import(`../${route.component}`));
+
+  if (route.navBar) {
+    const NavBar = React.lazy(() => import("@views/NavBar"));
 
     const ElementWithNavBar: React.FC = () => (
       <NavBar>

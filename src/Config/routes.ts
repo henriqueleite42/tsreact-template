@@ -1,13 +1,19 @@
-interface RouteInterface {
+export interface RouteInterface {
   name: string;
   fullRoute: string;
   component: string;
-  authOnly: boolean;
-  blocked: boolean;
+  blocked?: boolean;
   navBar: boolean;
 }
 
-const NON_AUTH_ROUTES: Array<RouteInterface> = [];
+const NON_AUTH_ROUTES: Array<RouteInterface> = [
+  {
+    name: "jobs",
+    fullRoute: "/jobs",
+    component: "Jobs",
+    navBar: true
+  }
+];
 
 const AUTH_ROUTES: Array<RouteInterface> = [];
 

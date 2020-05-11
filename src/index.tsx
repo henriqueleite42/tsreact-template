@@ -1,14 +1,15 @@
+import Router from "@views/Router";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
+
 import * as serviceWorker from "./serviceWorker";
 
-import Router from "./Views/Router";
+import store from "@redux/store";
 
-import store from "./Redux/store";
+import "@config/fontawesome";
 
-import "./Config/fontawesome";
-import "./Style/index.scss";
+import "@style/index.scss";
 
 ReactDOM.render(
   <Provider store={store}>
