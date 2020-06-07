@@ -12,6 +12,7 @@ rm src/Components/.gitkeep
 rm src/Constants/.gitkeep
 rm src/Functions/.gitkeep
 rm src/Utils/.gitkeep
+rm src/Temp/.gitkeep
 rm README.md
 toutch README.md
 ```

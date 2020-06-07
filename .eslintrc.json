@@ -10,7 +10,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "import-helpers"],
+  "plugins": ["react", "react-hooks", "import-helpers"],
   "rules": {
     "react/jsx-uses-react": 1,
     "react/prop-types": 0,
@@ -37,7 +37,8 @@
           ["/Core/Constants/", "/Constants/"],
           ["/Core/Interfaces/", "/Interfaces/"],
           ["/Core/Assets/", "/Assets/"],
-          "/style/"
+          "/style/",
+          "/Temp/"
         ],
         "alphabetize": {
           "order": "asc",
