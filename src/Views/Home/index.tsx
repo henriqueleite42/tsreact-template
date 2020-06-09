@@ -1,9 +1,9 @@
 import React from "react";
 
-import style from "./style.module.scss";
+import { Container } from "./style";
 
 const Home: React.FC = () => {
-  return <div className={style["container"]}>B</div>;
+  return <Container></Container>;
 };
 
 export default Home;

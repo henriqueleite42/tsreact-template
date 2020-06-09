@@ -8,7 +8,6 @@ yarn
 rm -rf .git
 git init
 rm src/Assets/.gitkeep
-rm src/Components/.gitkeep
 rm src/Constants/.gitkeep
 rm src/Functions/.gitkeep
 rm src/Utils/.gitkeep

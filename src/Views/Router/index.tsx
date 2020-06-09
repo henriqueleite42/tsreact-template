@@ -2,33 +2,35 @@ import React, { Suspense } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import AuthOnlyRoutes from "./AuthOnlyRoutes";
-import Loading from "./Loading";
 import loadRoute from "./loadRoute";
 
-import { useGlobalState } from "../../Redux/state";
+import Loading from "Components/Loading";
 
-import Routes from "Config/routes";
+import { useGlobalConfig } from "Hooks/useGlobalConfig";
+
+import { NON_AUTH_ROUTES, AUTH_ROUTES } from "Config/routes";
 
 const Router: React.FC = () => {
-  const GlobalState = useGlobalState();
+  const { theme } = useGlobalConfig();
 
   return (
     <Suspense fallback={<Loading />}>
-      <div data-theme={GlobalState.theme}>
+      <div data-theme={theme}>
         <BrowserRouter>
           <Switch>
-            {Routes.getNonAuth().map((route, index) => (
+            {NON_AUTH_ROUTES.map(route => (
               <Route
                 exact
-                key={index}
+                key={route.name}
                 path={route.fullRoute}
                 component={loadRoute(route)}
               />
             ))}
             <AuthOnlyRoutes>
-              {Routes.getAuth().map((route, index) => (
+              {AUTH_ROUTES.map(route => (
                 <Route
-                  key={index}
+                  exact
+                  key={route.name}
                   path={route.fullRoute}
                   component={loadRoute(route)}
                 />

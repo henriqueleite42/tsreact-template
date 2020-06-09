@@ -26,11 +26,11 @@
       {
         "newlinesBetween": "always",
         "groups": [
-          ["react", "module"],
+          ["/react/", "module"],
           ["parent", "sibling", "index"],
           ["/Core/Views/", "/Views/"],
           ["/Core/Components/", "/Components/"],
-          ["/Core/Redux/", "/Redux/"],
+          ["/Core/Hooks/", "/Hooks/"],
           ["/Core/Functions/", "/Functions/"],
           ["/Core/Utils/", "/Utils/"],
           ["/Core/Config/", "/Config/"],

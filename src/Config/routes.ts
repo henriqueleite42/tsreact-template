@@ -6,21 +6,13 @@ export interface RouteInterface {
   navBar: boolean;
 }
 
-const NON_AUTH_ROUTES: Array<RouteInterface> = [
+export const NON_AUTH_ROUTES: Array<RouteInterface> = [
   {
     name: "home",
     fullRoute: "/",
     component: "Home",
-    navBar: true
-  }
+    navBar: true,
+  },
 ];
 
-const AUTH_ROUTES: Array<RouteInterface> = [];
-
-class Routes {
-  static getNonAuth = () => NON_AUTH_ROUTES;
-
-  static getAuth = () => AUTH_ROUTES;
-}
-
-export default Routes;
+export const AUTH_ROUTES: Array<RouteInterface> = [];
