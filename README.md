@@ -14,7 +14,7 @@ rm src/Functions/.gitkeep
 rm src/Utils/.gitkeep
 rm src/Temp/.gitkeep
 rm README.md
-toutch README.md
+touch README.md
 ```
 
 Or just fork it and have fun! :D
