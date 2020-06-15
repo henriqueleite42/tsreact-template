@@ -22,7 +22,7 @@ const Router: React.FC = () => {
               <Route
                 exact
                 key={route.name}
-                path={route.fullRoute}
+                path={route.route}
                 component={loadRoute(route)}
               />
             ))}
@@ -31,7 +31,7 @@ const Router: React.FC = () => {
                 <Route
                   exact
                   key={route.name}
-                  path={route.fullRoute}
+                  path={route.route}
                   component={loadRoute(route)}
                 />
               ))}
